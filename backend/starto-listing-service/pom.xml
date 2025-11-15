@@ -5,45 +5,46 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>3.5.7</version>
+		<version>3.3.0</version>
 		<relativePath/> </parent>
 	<groupId>com.example</groupId>
-	<artifactId>starto-discovery-server</artifactId>
+	<artifactId>starto-listing-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>starto-discovery-server</name>
-	<description>first microservices</description>
-	<url/>
-	<licenses>
-		<license/>
-	</licenses>
-	<developers>
-		<developer/>
-	</developers>
-	<scm>
-		<connection/>
-		<developerConnection/>
-		<tag/>
-		<url/>
-	</scm>
-
+	<name>starto-listing-service</name>
+	<description>Demo project for Spring Boot</description>
 	<properties>
 		<java.version>21</java.version>
-		<spring-cloud.version>2025.0.0</spring-cloud.version>
+		<spring-cloud.version>2023.0.1</spring-cloud.version>
 	</properties>
-
 	<dependencies>
 		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
 		</dependency>
-
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+			<scope>runtime</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<optional>true</optional>
+		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
-
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
