@@ -23,7 +23,7 @@ public class JwtService {
     public String generateToken(UserDetails userDetails) {
         Map<String, Object> claims = new HashMap<>();
         // You could add custom claims here (e.g., roles)
-        // claims.put("role", userDetails.getAuthorities());
+        claims.put("role", userDetails.getAuthorities());
 
         return createToken(claims, userDetails.getUsername());
     }
